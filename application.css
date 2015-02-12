@@ -1,0 +1,54 @@
+
+body {
+  padding: 30px;
+}
+
+button {
+  padding: 5px;
+  border-radius: 10%;
+}
+
+
+#result {
+  background-color: #eee;
+  float: left;
+  padding: 5px;
+}
+
+#weather {
+  background-color: #ddd;
+  float: right;
+  padding: 5px;
+}
+
+/*.cloudy {
+  background-img: 'http://some.com/img.';
+}
+
+.sunny {
+  background-img: 'http://some.com/img.';
+}*/
+
+
+#square {
+  width: 100px;
+  height: 100px;
+  background-color: #bbb;
+  clear: both;
+  margin: 40px;
+  -webkit-transition-property: all;
+  -webkit-transition-duration: 1s;
+  -webkit-transition-timing-function: linear;
+  /*-webkit-transition-delay: 1s;*/
+}
+
+#square.slide {
+  background-color: #f55;
+  clear: both;
+  margin-left: 600px;
+  border-radius: 50%;
+}
+
+
+
+
