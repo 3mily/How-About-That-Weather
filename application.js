@@ -29,6 +29,7 @@ $(function(){
       },
       success: function(data){
         $('#result').empty();
+        $('#weather').empty();
         $.each(data, function(i, cities){
           cities.forEach(function(city){
             var $list = $("<li>").text(city.name);
@@ -58,6 +59,7 @@ $(function(){
       },
       success : function(data){
         $('#weather').empty();
+        $('#result').empty();
         if(data.current_observation){
           var city_name = data.current_observation.display_location.city;
           var city_weather = data.current_observation.weather;
@@ -65,9 +67,9 @@ $(function(){
           var temp_low = data.almanac.temp_low.normal.C;
 
           $("<h3>").text(city_name).appendTo("#weather")
-          $("<p>").text('Weather: '+ city_weather).appendTo('#weather');
-          $("<p>").text('High: '+ temp_high + " C").appendTo('#weather');
-          $("<p>").text('Low: '+ temp_low + " C").appendTo('#weather');
+          $("<p>").text('Weather: '+ city_weather + '| High: '+ temp_high + " C | Low: "+ temp_low + " C").appendTo('#weather');
+
+
         } else {
           $("<h3>").text('City data not found.').appendTo("#weather");
         }
